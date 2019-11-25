@@ -9,8 +9,8 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 852ba3230fbe2e649948d7b5f6cdab419a51df8202f5285792180dba6ff9d021
 build:
-  noarch: python
-  number: 0
+  # Cannot use `noarch: python` as this uses typing
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
@@ -18,14 +18,14 @@ requirements:
     - python >=3.5
     - pip
     - setuptools
-    - typing
+    - typing  # [py<36]
     - pandas
     - numpy
   run:
     - python >=3.5
     - pip
     - setuptools
-    - typing
+    - typing  # [py<36]
     - pandas
     - numpy
 

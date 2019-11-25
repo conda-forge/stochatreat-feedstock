@@ -10,30 +10,26 @@ source:
   sha256: 852ba3230fbe2e649948d7b5f6cdab419a51df8202f5285792180dba6ff9d021
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.6
     - pip
     - setuptools
-    - typing
     - pandas
     - numpy
   run:
-    - python >=3.5
+    - python >=3.6
     - pip
     - setuptools
-    - typing
     - pandas
     - numpy
 
 test:
   imports:
     - stochatreat
-  requires:
-    - pytest
 
 about:
   home: http://github.com/manmartgarc/stochatreat

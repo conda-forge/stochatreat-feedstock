@@ -9,31 +9,26 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 852ba3230fbe2e649948d7b5f6cdab419a51df8202f5285792180dba6ff9d021
 build:
-  # Cannot use `noarch: python` as this uses typing
-  number: 1
+  noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.6
     - pip
     - setuptools
-    - typing  # [py<36]
     - pandas
     - numpy
   run:
-    - python >=3.5
+    - python >=3.6
     - pip
     - setuptools
-    - typing  # [py<36]
     - pandas
     - numpy
 
 test:
   imports:
     - stochatreat
-  requires:
-    - pytest
 
 about:
   home: http://github.com/manmartgarc/stochatreat

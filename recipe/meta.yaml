@@ -1,5 +1,5 @@
 {% set name = "stochatreat" %}
-{% set version = "0.0.8" %}
+{% set version = "0.0.13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 852ba3230fbe2e649948d7b5f6cdab419a51df8202f5285792180dba6ff9d021
+  sha256: 4b1e739617a6f5f11174d62d83b54d80365f53702c485988f810406d81de7a6d
 build:
   noarch: python
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -36,7 +36,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Python module for block randomization using pandas'
+  summary: Python module for block randomization using pandas
 
   description: |
     stochatreat is a Python module to employ block randomization using pandas.

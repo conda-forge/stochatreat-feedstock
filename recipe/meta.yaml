@@ -17,13 +17,13 @@ requirements:
   host:
     - python >=3.6
     - pip
-    - setuptools
+    - hatch
     - pandas
     - numpy
   run:
     - python >=3.6
     - pip
-    - setuptools
+    - hatch
     - pandas
     - numpy
 

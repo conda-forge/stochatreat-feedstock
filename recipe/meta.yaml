@@ -1,5 +1,5 @@
 {% set name = "stochatreat" %}
-{% set version = "0.0.17" %}
+{% set version = "0.0.18" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 63e04ec21811fc1f3277d1e8f636cc8aaad29fa4c2cf427ed9c7559bf9b912c0
+  sha256: f72985f6351a653c76e43d22b5eb9bc8bf05fbf73414c18fdd08876d948213d4
 build:
   noarch: python
   number: 0

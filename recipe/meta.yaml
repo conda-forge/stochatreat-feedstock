@@ -19,6 +19,7 @@ requirements:
     - python {{ python_min }}
     - pip
     - hatch
+    - hatch-vcs
     - pandas
     - numpy
   run:
